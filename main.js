@@ -49,7 +49,7 @@ async function generateFamilyTree (jsonData) {
 
   // Output the GoJS makeImageData as a .png:
   const { buffer } = parseDataUrl(imageData);
-  // fs.writeFileSync('family-tree.png', buffer, 'base64');
+  fs.writeFileSync('family-tree.png', buffer, 'base64');
   await browser.close();
   return bufferToStream(buffer);
 }
